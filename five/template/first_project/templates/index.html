@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Picture</title>
+    <link rel="stylesheet" href="{%static "css/css.css"%}">
+  </head>
+  <body>
+    <h1>Its imageinsert</h1>
+
+    <img src="{% static "ali.jpg" %}" alt="fail">
+
+<div class="django">
+  {% if webpages %}
+  <table>
+    <thead>
+      <th>Site name</th>
+      <th>Date AccesRecord</th>
+      <th>Topic</th>
+
+    </thead>
+
+  {% for i in webpages %}
+  <tr>
+    <td>{{i.name }}</td>
+    <td>{{i.url}}</td>
+    <td>{{i.topic}}</td>
+    <td>{{ j.date}}</td>
+  </tr>
+  {% endfor %}
+</table>
+ {%else %}
+ <p>No acces found</p>
+ {% endif%}
+</div>
+
+
+   </body>
+</html>

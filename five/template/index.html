@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+
+{% extends "base.html" %}
+
+{% block body_block %}
+
+<div class="jumbotron">
+  <h1>Welcome to the home page</h1>
+
+    <p> {{name}}</p>
+    <p>{{password}}</p>
+    <p> {{ request.user.email_user  }}</p>
+</div>
+
+{% endblock %}
